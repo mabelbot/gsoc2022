@@ -10,3 +10,10 @@
 - Created my tracking repository https://github.com/mabelbot/gsoc2022/ with inspiration from @vchrombie 
 - I created my organization as described to start contributing
     - Since this was my first time creating an organization I read a few resources to understand what to do, here's one of them: https://resources.github.com/downloads/github-guide-to-organizations.pdf
+
+
+- Going back through the tutorial https://chaoss.github.io/grimoirelab-tutorial/docs/getting-started/dev-setup/. I also believe this is equivalent to https://github.com/chaoss/grimoirelab-sirmordred/blob/master/Getting-Started.md (see https://github.com/chaoss/community/issues/305) (to make sure I didn't miss anything during bonding period)
+    - The option I had used previously was "Source code and Docker" available here "In this method, the applications (Elasticsearch, Kibiter and MariaDB) are installed using docker and the GrimoireLab Components are installed using the source code."
+    - Might need to redo this entire tutorial because of the organization (I did not use an organization before when I did the tutorial) (https://github.com/cli/cli/issues/1120)
+    - I believe it can be done manually, [see here](https://stackoverflow.com/questions/9023533/fork-as-organization-after-already-forking-in-github#:~:text=Clicking%20the%20Fork%20button%20will,repository%20in%20your%20organization%20area.), but seeing as the script was really useful before I will try that again.
+    - I am not sure which of the repos within Grimoirelab I will ultimately need, nor how to exclude some and still keep the dev setup functioning the same way as the tutorial, so I will try to fork all of them.
