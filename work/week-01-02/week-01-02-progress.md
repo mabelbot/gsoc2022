@@ -36,8 +36,8 @@
                 Optional parameter to specify the organization name if forking into an organization.
 
             ``` 
-            This aligns with what we want. However, how to specify the organization is the next challenge. 
-        5. 
+            This aligns with what we want. However, how to specify the organization and make sure authorization is possible is the next challenge. See https://pygithub.readthedocs.io/en/latest/examples/MainClass.html?highlight=organization#get-organization-by-name
+        5. Make sure the directory is correct and the venv is activated when running the script. I was able to update the script's `create` method but I didn't touch the `update` method yet. 
 
 
         - I believe it can be done manually, [see here](https://stackoverflow.com/questions/9023533/fork-as-organization-after-already-forking-in-github#:~:text=Clicking%20the%20Fork%20button%20will,repository%20in%20your%20organization%20area.), but seeing as the script was really useful before I will try that again.
