@@ -1,6 +1,6 @@
 # Coding Period Week 1 + 2
 
-## Summary
+## Summary / TLDR
 - Week 1 - consisted of meetings to scope out the project. See meeting notes from the two meetings that were held here: https://github.com/mabelbot/gsoc2022/blob/main/meetings/06-17-2022.md and https://github.com/mabelbot/gsoc2022/blob/main/meetings/06-19-2022.md
 - Week 2 - more meetings to scope out the project. See meeting notes https://github.com/mabelbot/gsoc2022/blob/main/meetings/06-20-2022.md, https://github.com/mabelbot/gsoc2022/blob/main/meetings/06-21-2022.md
 - Reviewed https://chaoss.github.io/grimoirelab-tutorial/docs/components/scenarios/ with Taiwei for data collection. Will review Taiwei proposal.
@@ -12,6 +12,7 @@
     - Since this was my first time creating an organization I read a few resources to understand what to do, here's one of them: https://resources.github.com/downloads/github-guide-to-organizations.pdf
 
 
+## Verbose Updates 
 - Going back through the tutorial https://chaoss.github.io/grimoirelab-tutorial/docs/getting-started/dev-setup/. I also believe this is equivalent to https://github.com/chaoss/grimoirelab-sirmordred/blob/master/Getting-Started.md (see https://github.com/chaoss/community/issues/305) (to make sure I didn't miss anything during bonding period)
     - The option I had used previously was "Source code and Docker" available here "In this method, the applications (Elasticsearch, Kibiter and MariaDB) are installed using docker and the GrimoireLab Components are installed using the source code." I used the Elasticsearch without SearchGuard option.
     - Might need to redo this entire tutorial because of the organization (I did not use an organization before when I did the tutorial) (https://github.com/cli/cli/issues/1120). Here are the steps I did
@@ -26,9 +27,19 @@
 
         3. [Cloning the repositories](https://chaoss.github.io/grimoirelab-tutorial/docs/getting-started/dev-setup/#cloning-the-repositories) - this step is going to fork and clone the repositories to a local folder. I created a virtual environment in `grimoirelab-dev` (python3 -m venv dev-env-setup because I anticipate it will be different than the one in the Pycharm step later) to perform the installation `python3 -m pip install PyGitHub GitPython`. 
         4. I then followed the instructions to use the script. The script is in the Github Gist by @vchrombie, [glab-dev-env-setup](https://gist.github.com/vchrombie/4403193198cd79e7ee0079259311f6e8). I am going to try to modify it to take an organization parameter. 
+            - https://pygithub.readthedocs.io/en/latest/github_objects/Repository.html
+            - I identified the `create_fork` method (in class Repository - which is NOT the same `create_fork` as currently called in the script, but there are multiple `create_fork` methods) as a place that will need updating to account for organization. From the Github API documentation for "Create a fork" we have
+            ```
+            Body parameters
+                Name, Type, Description
+                organizationstring
+                Optional parameter to specify the organization name if forking into an organization.
+
+            ``` 
+            This aligns with what we want. However, how to specify the organization is the next challenge. 
         5. 
 
-        
+
         - I believe it can be done manually, [see here](https://stackoverflow.com/questions/9023533/fork-as-organization-after-already-forking-in-github#:~:text=Clicking%20the%20Fork%20button%20will,repository%20in%20your%20organization%20area.), but seeing as the script was really useful before I will try that again.
         - I am not sure which of the repos within Grimoirelab I will ultimately need in the organization, nor how to exclude some in the organization and still keep the dev setup functioning the same way as the tutorial, so I will try to fork all of them.
         - 
