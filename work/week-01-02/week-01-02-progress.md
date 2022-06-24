@@ -54,7 +54,7 @@ The organization I am using for this project: https://github.com/chaoss-conversi
             - Testing out committing to one of the forked repos. I will try adding something to the readme of grimoirelab-elk to sanity check git push origin mabelbot-testing-06232022. Delete with `git branch -D mabelbot-testing-06232022 Deleted branch mabelbot-testing-06232022 (was fb0c9a76).`
             - I think the `origin` remote is not set correctly (it could still work that way, but it's connected to my own Github account repos). Therefore for grimoirelab-elk it should be `git remote set-url origin https://github.com/chaoss-conversion-rate-mabel/grimoirelab-elk`
             - Try again with the readme. Made a new branch `git checkout -b mabelbot-testing-06232022-origin` 
-            - It seems to work now. So the script would need to add an extra step of setting the url of the origin remote as it is defaulting to the user's own repository IF you choose to work with an organization. This is TBD. Referenced: https://gitpython.readthedocs.io/en/stable/reference.html?highlight=set_url#git.remote.Remote.set_url
+            - It seems to work now. So the script would need to add an extra step of setting the url of the origin remote as it is defaulting to the user's own repository IF you choose to work with an organization. These changes are marked with `f2c29d`. Referenced: https://gitpython.readthedocs.io/en/stable/reference.html?highlight=set_url#git.remote.Remote.set_url
         7. Now, complete the rest of the tutorial
 
 
