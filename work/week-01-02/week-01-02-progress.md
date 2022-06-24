@@ -21,7 +21,7 @@ The organization I am using for this project: https://github.com/chaoss-conversi
 
 ## Verbose Updates 
 - Going back through the tutorial https://chaoss.github.io/grimoirelab-tutorial/docs/getting-started/dev-setup/. I also believe this is equivalent to https://github.com/chaoss/grimoirelab-sirmordred/blob/master/Getting-Started.md (see https://github.com/chaoss/community/issues/305) (to make sure I didn't miss anything during bonding period)
-    - The option I had used previously was "Source code and Docker" available here "In this method, the applications (Elasticsearch, Kibiter and MariaDB) are installed using docker and the GrimoireLab Components are installed using the source code." I used the Elasticsearch without SearchGuard option.
+    - The option I had used previously was "Source code and Docker". I used the Elasticsearch without SearchGuard option.
     - Might need to redo this entire tutorial because of the organization (I did not use an organization before when I did the tutorial) (https://github.com/cli/cli/issues/1120). Here are the steps I did
         1. Creating a `docker-compose.yml` file according to the tutorial.
         2. Run `docker-compose up -d` in directory `grimoirelab-dev` to get Elasticsearch, Kibiter and MariaDB running on your system. (Docker Desktop 4.9.1 (updated - took around 20 mins) in my case should be running).
