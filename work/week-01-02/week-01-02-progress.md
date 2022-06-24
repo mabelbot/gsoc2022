@@ -75,3 +75,9 @@ The organization I am using for this project: https://github.com/chaoss-conversi
 - Customize readmes, organization
 - Fix Payoneer issue for GSOC
 - https://www.atlassian.com/git/tutorials/git-forks-and-upstreams
+- Move blog post 0 from private to public
+
+
+
+# Random 
+- 
