@@ -29,16 +29,17 @@
         4. I then followed the instructions to use the script. The script is in the Github Gist by @vchrombie, [glab-dev-env-setup](https://gist.github.com/vchrombie/4403193198cd79e7ee0079259311f6e8). I am going to try to modify it to take an organization parameter. This is because although I believe it can be done manually, [see here](https://stackoverflow.com/questions/9023533/fork-as-organization-after-already-forking-in-github#:~:text=Clicking%20the%20Fork%20button%20will,repository%20in%20your%20organization%20area.), but the script was really useful before.
             - https://pygithub.readthedocs.io/en/latest/github_objects/Repository.html
             - **Note**: I am not sure which of the repos within Grimoirelab I will ultimately need in the organization, nor how to exclude some in the organization and still keep the dev setup functioning the same way as the tutorial, so I will try to fork all of them.
-            - I identified the `create_fork` method (in class Repository - which is NOT the same `create_fork` as currently called in the script, but there are multiple `create_fork` methods) as a place that will need updating to account for organization. From the Github API documentation for "Create a fork" we have
-            ```
-            Body parameters
-                Name, Type, Description
-                organizationstring
-                Optional parameter to specify the organization name if forking into an organization.
+            - I identified the `create_fork` method call that I want to replace (in class Organization - which is NOT the same `create_fork` as currently called in the script - that one is from class `AuthenticatedUser`, because there are multiple `create_fork` methods). 
+                - From the Github API documentation for "Create a fork" we have
+                    ```
+                    Body parameters
+                        Name, Type, Description
+                        organizationstring
+                        Optional parameter to specify the organization name if forking into an organization.
 
-            ``` 
-            This aligns with what we want. However, how to specify the organization and make sure authorization is possible is the next challenge. See https://pygithub.readthedocs.io/en/latest/examples/MainClass.html?highlight=organization#get-organization-by-name
-        5. Make sure the directory is correct and the venv is activated when running the script. I was able to update the script's `create` method but I didn't touch the `update` method yet. Edits labeled with `a91e6c`.
+                    ``` 
+                    This aligns with what we want. See https://pygithub.readthedocs.io/en/latest/examples/MainClass.html?highlight=organization#get-organization-by-name. 
+                - It ended up being relatively straightforward to specify the organization by name. I then added ability pass the organization name in with the `-org` parameter. I was able to update the script's `create` method but I didn't touch the `update` method yet. These edits are labeled with `a91e6c`.
         6. 
 
 
