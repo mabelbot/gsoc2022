@@ -1,4 +1,11 @@
-# Coding Period Week 1 + 2
+# Coding Period Week 1 + 2 Report
+[![Generic badge](https://img.shields.io/badge/Report_Status-In_Progress-<>.svg)](https://shields.io/)
+[![Generic badge](https://img.shields.io/badge/Last_Updated_(PDT)-June_23,_2022-e10b95.svg)](https://shields.io/)
+
+Quick link to this page if viewed elsewhere: https://github.com/mabelbot/gsoc2022/blob/main/work/week-01-02/week-01-02-progress.md
+
+The organization I am using for this project: https://github.com/chaoss-conversion-rate-mabel
+
 
 ## Summary / TLDR
 - Week 1 - consisted of meetings to scope out the project. See meeting notes from the two meetings that were held here: https://github.com/mabelbot/gsoc2022/blob/main/meetings/06-17-2022.md and https://github.com/mabelbot/gsoc2022/blob/main/meetings/06-19-2022.md
@@ -42,11 +49,29 @@
                 - It ended up being relatively straightforward to specify the organization by name. I then added ability pass the organization name in with the `-org` parameter. I was able to update the script's `create` method but I didn't touch the `update` method, it doesn't seem like it needs to be edited These edits are labeled with `a91e6c`.
                 - I originally ran the script in the wrong directory, so I deleted sources folder it created and had to make a new organization. 
             - Final run of the script: `python3 glab-dev-env-setup.py --create --token [token] --source ../sources --org chaoss-conversion-rate-mabel`
+            - The script I made is in this progress tracker under scripts. Use it at your own risk (it has not been 100% debugged yet)
         6. Check the remotes to make sure they are correct.
+            - Testing out committing to one of the forked repos. I will try adding something to the readme of grimoirelab-elk to sanity check git push origin mabelbot-testing-06232022. Delete with `git branch -D mabelbot-testing-06232022 Deleted branch mabelbot-testing-06232022 (was fb0c9a76).`
+            - I think the `origin` remote is not set correctly (it could still work that way, but it's connected to my own Github account repos). Therefore for grimoirelab-elk it should be `git remote set-url origin https://github.com/chaoss-conversion-rate-mabel/grimoirelab-elk`
+            - Try again with the readme. Made a new branch `git checkout -b mabelbot-testing-06232022-origin` 
+            - It seems to work now. So the script would need to add an extra step of setting the url of the origin remote as it is defaulting to the user's own repository IF you choose to work with an organization. This is TBD. Referenced: https://gitpython.readthedocs.io/en/stable/reference.html?highlight=set_url#git.remote.Remote.set_url
+        7. Now, complete the rest of the tutorial
+
+
 
 # Questions
 1. When to run the script with `--update`? Is it still relevant?
 2. Are remotes correct for an organization setup?
+3. Tests for grimoirelab-elk
+
 
 
     
+# To Do List
+- Finish round 2 of dev setup
+- Finish review of https://github.com/chaoss/grimoirelab-elk/blob/master/grimoire_elk/enriched/github.py
+- Review Yehui examples (TBD - not sent yet)
+- Review proposal
+- Customize readmes, organization
+- Fix Payoneer issue for GSOC
+- https://www.atlassian.com/git/tutorials/git-forks-and-upstreams
