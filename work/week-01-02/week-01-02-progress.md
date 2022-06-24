@@ -42,11 +42,11 @@
                 - It ended up being relatively straightforward to specify the organization by name. I then added ability pass the organization name in with the `-org` parameter. I was able to update the script's `create` method but I didn't touch the `update` method, it doesn't seem like it needs to be edited These edits are labeled with `a91e6c`.
                 - I originally ran the script in the wrong directory, so I deleted sources folder it created and had to make a new organization. 
             - Final run of the script: `python3 glab-dev-env-setup.py --create --token [token] --source ../sources --org chaoss-conversion-rate-mabel`
-        6. Check the remotes to make sure they are correct
+        6. Check the remotes to make sure they are correct.
 
 # Questions
 1. When to run the script with `--update`? Is it still relevant?
-2. 
+2. Are remotes correct for an organization setup?
 
 
     
