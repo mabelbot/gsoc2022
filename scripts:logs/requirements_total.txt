@@ -19,7 +19,7 @@
 -e git+https://github.com/chaoss/grimoirelab-toolkit/#egg=grimoirelab-toolkit
 -e git+https://github.com/chaoss/grimoirelab-toolkit/#egg=grimoirelab-toolkit
 -e git+https://github.com/chaoss/grimoirelab-toolkit/#egg=grimoirelab-toolkit
-# Reuse the setup.py one
+# This includes the grimoirelab components but should be deleted in the end
 bandit>=1.4.0
 beautifulsoup4>=4.3.2
 cheroot>=8.2.1

@@ -1,17 +1,3 @@
-(grimoirelab-sirmordred) mabel@Mabels-MacBook-Pro sources % /Users/mabel/.virtualenvs/grimoirelab-sirmordred/bin/python -m pip install --upgrade pip 
-Requirement already satisfied: pip in /Users/mabel/.virtualenvs/grimoirelab-sirmordred/lib/python3.8/site-packages (21.3.1)
-Collecting pip
-  Using cached pip-22.1.2-py3-none-any.whl (2.1 MB)
-Installing collected packages: pip
-  Attempting uninstall: pip
-    Found existing installation: pip 21.3.1
-    Uninstalling pip-21.3.1:
-      Successfully uninstalled pip-21.3.1
-Successfully installed pip-22.1.2
-(grimoirelab-sirmordred) mabel@Mabels-MacBook-Pro sources % pip install -r requirements_total_actual.txt 
-Obtaining file:///Users/mabel/Desktop/GSOC2022/grimoirelab-dev/sources (from -r requirements_total_actual.txt (line 1))
-ERROR: file:///Users/mabel/Desktop/GSOC2022/grimoirelab-dev/sources (from -r requirements_total_actual.txt (line 1)) does not appear to be a Python project: neither 'setup.py' nor 'pyproject.toml' found.
-(grimoirelab-sirmordred) mabel@Mabels-MacBook-Pro sources % cd grimoirelab-sirmordred
 (grimoirelab-sirmordred) mabel@Mabels-MacBook-Pro grimoirelab-sirmordred % pip install -r requirements_total_actual.txt
 Obtaining file:///Users/mabel/Desktop/GSOC2022/grimoirelab-dev/sources/grimoirelab-sirmordred (from -r requirements_total_actual.txt (line 1))
   Installing build dependencies ... done

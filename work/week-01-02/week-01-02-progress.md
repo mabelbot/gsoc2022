@@ -66,6 +66,8 @@ The organization I am using for this project: https://github.com/chaoss-conversi
 2. Are remotes correct for an organization setup?
 3. Tests for grimoirelab-elk
 4. Is ignoring the correct behavior for the installation? This didn't come up last time
+5. Issue ERROR: Could not find a version that satisfies the requirement grimoireelk (unavailable) (from versions: none) / ERROR: No matching distribution found for grimoireelk (unavailable)
+6. 
 
 
 
@@ -83,4 +85,4 @@ The organization I am using for this project: https://github.com/chaoss-conversi
 
 
 # Random 
-- 
+- `/Users/mabel/.virtualenvs/grimoirelab-sirmordred/bin/python -m pip install --upgrade pip `
