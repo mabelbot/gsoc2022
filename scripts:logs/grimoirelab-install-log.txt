@@ -1,0 +1,234 @@
+(grimoirelab-sirmordred) mabel@Mabels-MacBook-Pro sources % /Users/mabel/.virtualenvs/grimoirelab-sirmordred/bin/python -m pip install --upgrade pip 
+Requirement already satisfied: pip in /Users/mabel/.virtualenvs/grimoirelab-sirmordred/lib/python3.8/site-packages (21.3.1)
+Collecting pip
+  Using cached pip-22.1.2-py3-none-any.whl (2.1 MB)
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 21.3.1
+    Uninstalling pip-21.3.1:
+      Successfully uninstalled pip-21.3.1
+Successfully installed pip-22.1.2
+(grimoirelab-sirmordred) mabel@Mabels-MacBook-Pro sources % pip install -r requirements_total_actual.txt 
+Obtaining file:///Users/mabel/Desktop/GSOC2022/grimoirelab-dev/sources (from -r requirements_total_actual.txt (line 1))
+ERROR: file:///Users/mabel/Desktop/GSOC2022/grimoirelab-dev/sources (from -r requirements_total_actual.txt (line 1)) does not appear to be a Python project: neither 'setup.py' nor 'pyproject.toml' found.
+(grimoirelab-sirmordred) mabel@Mabels-MacBook-Pro sources % cd grimoirelab-sirmordred
+(grimoirelab-sirmordred) mabel@Mabels-MacBook-Pro grimoirelab-sirmordred % pip install -r requirements_total_actual.txt
+Obtaining file:///Users/mabel/Desktop/GSOC2022/grimoirelab-dev/sources/grimoirelab-sirmordred (from -r requirements_total_actual.txt (line 1))
+  Installing build dependencies ... done
+  Checking if build backend supports build_editable ... done
+  Getting requirements to build editable ... done
+  Preparing editable metadata (pyproject.toml) ... done
+Obtaining grimoirelab-perceval-finos from git+https://github.com/Bitergia/grimoirelab-perceval-finos/#egg=grimoirelab-perceval-finos (from -r requirements_total_actual.txt (line 2))
+  Cloning https://github.com/Bitergia/grimoirelab-perceval-finos/ to /Users/mabel/.virtualenvs/grimoirelab-sirmordred/src/grimoirelab-perceval-finos
+  Running command git clone --filter=blob:none --quiet https://github.com/Bitergia/grimoirelab-perceval-finos/ /Users/mabel/.virtualenvs/grimoirelab-sirmordred/src/grimoirelab-perceval-finos
+  Resolved https://github.com/Bitergia/grimoirelab-perceval-finos/ to commit 3199e698aedf68b8c8bdb3825a86e1b559256013
+  Installing build dependencies ... done
+  Checking if build backend supports build_editable ... done
+  Getting requirements to build editable ... done
+  Preparing editable metadata (pyproject.toml) ... done
+  WARNING: Generating metadata for package grimoirelab-perceval-finos produced metadata for project name perceval-finos. Fix your #egg=grimoirelab-perceval-finos fragments.
+Discarding git+https://github.com/Bitergia/grimoirelab-perceval-finos/#egg=grimoirelab-perceval-finos: Requested perceval-finos from git+https://github.com/Bitergia/grimoirelab-perceval-finos/#egg=grimoirelab-perceval-finos (from -r requirements_total_actual.txt (line 2)) has inconsistent name: filename has 'grimoirelab-perceval-finos', but metadata has 'perceval-finos'
+Obtaining grimoirelab-cereslib from git+https://github.com/chaoss/grimoirelab-cereslib/#egg=grimoirelab-cereslib (from -r requirements_total_actual.txt (line 3))
+  Cloning https://github.com/chaoss/grimoirelab-cereslib/ to /Users/mabel/.virtualenvs/grimoirelab-sirmordred/src/grimoirelab-cereslib
+  Running command git clone --filter=blob:none --quiet https://github.com/chaoss/grimoirelab-cereslib/ /Users/mabel/.virtualenvs/grimoirelab-sirmordred/src/grimoirelab-cereslib
+  Resolved https://github.com/chaoss/grimoirelab-cereslib/ to commit 2635211be3b5f687546555cab02ba736d9f2f3e5
+  Installing build dependencies ... done
+  Checking if build backend supports build_editable ... done
+  Getting requirements to build editable ... done
+  Preparing editable metadata (pyproject.toml) ... done
+  WARNING: Generating metadata for package grimoirelab-cereslib produced metadata for project name cereslib. Fix your #egg=grimoirelab-cereslib fragments.
+Discarding git+https://github.com/chaoss/grimoirelab-cereslib/#egg=grimoirelab-cereslib: Requested cereslib from git+https://github.com/chaoss/grimoirelab-cereslib/#egg=grimoirelab-cereslib (from -r requirements_total_actual.txt (line 3)) has inconsistent name: filename has 'grimoirelab-cereslib', but metadata has 'cereslib'
+Obtaining grimoirelab-elk from git+https://github.com/chaoss/grimoirelab-elk/#egg=grimoirelab-elk (from -r requirements_total_actual.txt (line 4))
+  Cloning https://github.com/chaoss/grimoirelab-elk/ to /Users/mabel/.virtualenvs/grimoirelab-sirmordred/src/grimoirelab-elk
+  Running command git clone --filter=blob:none --quiet https://github.com/chaoss/grimoirelab-elk/ /Users/mabel/.virtualenvs/grimoirelab-sirmordred/src/grimoirelab-elk
+  Resolved https://github.com/chaoss/grimoirelab-elk/ to commit cf433d69356cffffa79b475876147687f1bfb1cd
+  Installing build dependencies ... done
+  Checking if build backend supports build_editable ... done
+  Getting requirements to build editable ... done
+  Preparing editable metadata (pyproject.toml) ... done
+  WARNING: Generating metadata for package grimoirelab-elk produced metadata for project name grimoire-elk. Fix your #egg=grimoirelab-elk fragments.
+Discarding git+https://github.com/chaoss/grimoirelab-elk/#egg=grimoirelab-elk: Requested grimoire-elk from git+https://github.com/chaoss/grimoirelab-elk/#egg=grimoirelab-elk (from -r requirements_total_actual.txt (line 4)) has inconsistent name: filename has 'grimoirelab-elk', but metadata has 'grimoire-elk'
+Obtaining grimoirelab-graal from git+https://github.com/chaoss/grimoirelab-graal/#egg=grimoirelab-graal (from -r requirements_total_actual.txt (line 5))
+  Cloning https://github.com/chaoss/grimoirelab-graal/ to /Users/mabel/.virtualenvs/grimoirelab-sirmordred/src/grimoirelab-graal
+  Running command git clone --filter=blob:none --quiet https://github.com/chaoss/grimoirelab-graal/ /Users/mabel/.virtualenvs/grimoirelab-sirmordred/src/grimoirelab-graal
+  Resolved https://github.com/chaoss/grimoirelab-graal/ to commit 201849c6ebef3f1dbf3ae51c9a2c1ee53da360d0
+  Installing build dependencies ... done
+  Checking if build backend supports build_editable ... done
+  Getting requirements to build editable ... done
+  Preparing editable metadata (pyproject.toml) ... done
+  WARNING: Generating metadata for package grimoirelab-graal produced metadata for project name graal. Fix your #egg=grimoirelab-graal fragments.
+Discarding git+https://github.com/chaoss/grimoirelab-graal/#egg=grimoirelab-graal: Requested graal from git+https://github.com/chaoss/grimoirelab-graal/#egg=grimoirelab-graal (from -r requirements_total_actual.txt (line 5)) has inconsistent name: filename has 'grimoirelab-graal', but metadata has 'graal'
+Obtaining grimoirelab-perceval-mozilla from git+https://github.com/chaoss/grimoirelab-perceval-mozilla/#egg=grimoirelab-perceval-mozilla (from -r requirements_total_actual.txt (line 6))
+  Cloning https://github.com/chaoss/grimoirelab-perceval-mozilla/ to /Users/mabel/.virtualenvs/grimoirelab-sirmordred/src/grimoirelab-perceval-mozilla
+  Running command git clone --filter=blob:none --quiet https://github.com/chaoss/grimoirelab-perceval-mozilla/ /Users/mabel/.virtualenvs/grimoirelab-sirmordred/src/grimoirelab-perceval-mozilla
+  Resolved https://github.com/chaoss/grimoirelab-perceval-mozilla/ to commit 45832ddb40ff1f8bec8177217d6dd3635460d507
+  Installing build dependencies ... done
+  Checking if build backend supports build_editable ... done
+  Getting requirements to build editable ... done
+  Preparing editable metadata (pyproject.toml) ... done
+  WARNING: Generating metadata for package grimoirelab-perceval-mozilla produced metadata for project name perceval-mozilla. Fix your #egg=grimoirelab-perceval-mozilla fragments.
+Discarding git+https://github.com/chaoss/grimoirelab-perceval-mozilla/#egg=grimoirelab-perceval-mozilla: Requested perceval-mozilla from git+https://github.com/chaoss/grimoirelab-perceval-mozilla/#egg=grimoirelab-perceval-mozilla (from -r requirements_total_actual.txt (line 6)) has inconsistent name: filename has 'grimoirelab-perceval-mozilla', but metadata has 'perceval-mozilla'
+Obtaining grimoirelab-perceval-opnfv from git+https://github.com/chaoss/grimoirelab-perceval-opnfv/#egg=grimoirelab-perceval-opnfv (from -r requirements_total_actual.txt (line 7))
+  Cloning https://github.com/chaoss/grimoirelab-perceval-opnfv/ to /Users/mabel/.virtualenvs/grimoirelab-sirmordred/src/grimoirelab-perceval-opnfv
+  Running command git clone --filter=blob:none --quiet https://github.com/chaoss/grimoirelab-perceval-opnfv/ /Users/mabel/.virtualenvs/grimoirelab-sirmordred/src/grimoirelab-perceval-opnfv
+  Resolved https://github.com/chaoss/grimoirelab-perceval-opnfv/ to commit 0852c18069345f8aa5c7004cb77b3bea50adef9d
+  Installing build dependencies ... done
+  Checking if build backend supports build_editable ... done
+  Getting requirements to build editable ... done
+  Preparing editable metadata (pyproject.toml) ... done
+  WARNING: Generating metadata for package grimoirelab-perceval-opnfv produced metadata for project name perceval-opnfv. Fix your #egg=grimoirelab-perceval-opnfv fragments.
+Discarding git+https://github.com/chaoss/grimoirelab-perceval-opnfv/#egg=grimoirelab-perceval-opnfv: Requested perceval-opnfv from git+https://github.com/chaoss/grimoirelab-perceval-opnfv/#egg=grimoirelab-perceval-opnfv (from -r requirements_total_actual.txt (line 7)) has inconsistent name: filename has 'grimoirelab-perceval-opnfv', but metadata has 'perceval-opnfv'
+Obtaining grimoirelab-perceval-puppet from git+https://github.com/chaoss/grimoirelab-perceval-puppet/#egg=grimoirelab-perceval-puppet (from -r requirements_total_actual.txt (line 8))
+  Cloning https://github.com/chaoss/grimoirelab-perceval-puppet/ to /Users/mabel/.virtualenvs/grimoirelab-sirmordred/src/grimoirelab-perceval-puppet
+  Running command git clone --filter=blob:none --quiet https://github.com/chaoss/grimoirelab-perceval-puppet/ /Users/mabel/.virtualenvs/grimoirelab-sirmordred/src/grimoirelab-perceval-puppet
+  Resolved https://github.com/chaoss/grimoirelab-perceval-puppet/ to commit 275bb6e5dd1f4ba764b84ff32c147f495e63057c
+  Installing build dependencies ... done
+  Checking if build backend supports build_editable ... done
+  Getting requirements to build editable ... done
+  Preparing editable metadata (pyproject.toml) ... done
+  WARNING: Generating metadata for package grimoirelab-perceval-puppet produced metadata for project name perceval-puppet. Fix your #egg=grimoirelab-perceval-puppet fragments.
+Discarding git+https://github.com/chaoss/grimoirelab-perceval-puppet/#egg=grimoirelab-perceval-puppet: Requested perceval-puppet from git+https://github.com/chaoss/grimoirelab-perceval-puppet/#egg=grimoirelab-perceval-puppet (from -r requirements_total_actual.txt (line 8)) has inconsistent name: filename has 'grimoirelab-perceval-puppet', but metadata has 'perceval-puppet'
+Obtaining grimoirelab-perceval-weblate from git+https://github.com/chaoss/grimoirelab-perceval-weblate/#egg=grimoirelab-perceval-weblate (from -r requirements_total_actual.txt (line 9))
+  Cloning https://github.com/chaoss/grimoirelab-perceval-weblate/ to /Users/mabel/.virtualenvs/grimoirelab-sirmordred/src/grimoirelab-perceval-weblate
+  Running command git clone --filter=blob:none --quiet https://github.com/chaoss/grimoirelab-perceval-weblate/ /Users/mabel/.virtualenvs/grimoirelab-sirmordred/src/grimoirelab-perceval-weblate
+  Resolved https://github.com/chaoss/grimoirelab-perceval-weblate/ to commit 4a9c2b43ce22d9db3aa0086e40977b56c1d7f364
+  Installing build dependencies ... done
+  Checking if build backend supports build_editable ... done
+  Getting requirements to build editable ... done
+  Preparing editable metadata (pyproject.toml) ... done
+  WARNING: Generating metadata for package grimoirelab-perceval-weblate produced metadata for project name perceval-weblate. Fix your #egg=grimoirelab-perceval-weblate fragments.
+Discarding git+https://github.com/chaoss/grimoirelab-perceval-weblate/#egg=grimoirelab-perceval-weblate: Requested perceval-weblate from git+https://github.com/chaoss/grimoirelab-perceval-weblate/#egg=grimoirelab-perceval-weblate (from -r requirements_total_actual.txt (line 9)) has inconsistent name: filename has 'grimoirelab-perceval-weblate', but metadata has 'perceval-weblate'
+Obtaining perceval from git+https://github.com/chaoss/grimoirelab-perceval.git/#egg=perceval (from -r requirements_total_actual.txt (line 10))
+  Cloning https://github.com/chaoss/grimoirelab-perceval.git/ to /Users/mabel/.virtualenvs/grimoirelab-sirmordred/src/perceval
+  Running command git clone --filter=blob:none --quiet https://github.com/chaoss/grimoirelab-perceval.git/ /Users/mabel/.virtualenvs/grimoirelab-sirmordred/src/perceval
+  Resolved https://github.com/chaoss/grimoirelab-perceval.git/ to commit cf8d5ffc2db0b4e2c19c541daa6062ccd2e609bd
+  Installing build dependencies ... done
+  Checking if build backend supports build_editable ... done
+  Getting requirements to build editable ... done
+  Preparing editable metadata (pyproject.toml) ... done
+Obtaining grimoirelab-perceval from git+https://github.com/chaoss/grimoirelab-perceval/#egg=grimoirelab-perceval (from -r requirements_total_actual.txt (line 13))
+  Cloning https://github.com/chaoss/grimoirelab-perceval/ to /Users/mabel/.virtualenvs/grimoirelab-sirmordred/src/grimoirelab-perceval
+  Running command git clone --filter=blob:none --quiet https://github.com/chaoss/grimoirelab-perceval/ /Users/mabel/.virtualenvs/grimoirelab-sirmordred/src/grimoirelab-perceval
+  Resolved https://github.com/chaoss/grimoirelab-perceval/ to commit cf8d5ffc2db0b4e2c19c541daa6062ccd2e609bd
+  Installing build dependencies ... done
+  Checking if build backend supports build_editable ... done
+  Getting requirements to build editable ... done
+  Preparing editable metadata (pyproject.toml) ... done
+  WARNING: Generating metadata for package grimoirelab-perceval produced metadata for project name perceval. Fix your #egg=grimoirelab-perceval fragments.
+Discarding git+https://github.com/chaoss/grimoirelab-perceval/#egg=grimoirelab-perceval: Requested perceval from git+https://github.com/chaoss/grimoirelab-perceval/#egg=grimoirelab-perceval (from -r requirements_total_actual.txt (line 13)) has inconsistent name: filename has 'grimoirelab-perceval', but metadata has 'perceval'
+Obtaining perceval from git+https://github.com/chaoss/grimoirelab-perceval/#egg=perceval (from -r requirements_total_actual.txt (line 14))
+  WARNING: git clone in /Users/mabel/.virtualenvs/grimoirelab-sirmordred/src/perceval exists with URL https://github.com/chaoss/grimoirelab-perceval.git/
+  WARNING: The plan is to install the git repository https://github.com/chaoss/grimoirelab-perceval/
+What to do?  (s)witch, (i)gnore, (w)ipe, (b)ackup i
+  Installing build dependencies ... done
+  Checking if build backend supports build_editable ... done
+  Getting requirements to build editable ... done
+  Preparing editable metadata (pyproject.toml) ... done
+Obtaining grimoirelab-sortinghat from git+https://github.com/chaoss/grimoirelab-sortinghat/#egg=grimoirelab-sortinghat (from -r requirements_total_actual.txt (line 15))
+  Cloning https://github.com/chaoss/grimoirelab-sortinghat/ to /Users/mabel/.virtualenvs/grimoirelab-sirmordred/src/grimoirelab-sortinghat
+  Running command git clone --filter=blob:none --quiet https://github.com/chaoss/grimoirelab-sortinghat/ /Users/mabel/.virtualenvs/grimoirelab-sirmordred/src/grimoirelab-sortinghat
+  Resolved https://github.com/chaoss/grimoirelab-sortinghat/ to commit 8b1d466476add5ef6979e8f7970ea9c097670a65
+  Installing build dependencies ... done
+  Checking if build backend supports build_editable ... done
+  Getting requirements to build editable ... done
+  Preparing editable metadata (pyproject.toml) ... done
+  WARNING: Generating metadata for package grimoirelab-sortinghat produced metadata for project name sortinghat. Fix your #egg=grimoirelab-sortinghat fragments.
+Discarding git+https://github.com/chaoss/grimoirelab-sortinghat/#egg=grimoirelab-sortinghat: Requested sortinghat from git+https://github.com/chaoss/grimoirelab-sortinghat/#egg=grimoirelab-sortinghat (from -r requirements_total_actual.txt (line 15)) has inconsistent name: filename has 'grimoirelab-sortinghat', but metadata has 'sortinghat'
+Obtaining grimoirelab-toolkit from git+https://github.com/chaoss/grimoirelab-toolkit/#egg=grimoirelab-toolkit (from -r requirements_total_actual.txt (line 16))
+  Cloning https://github.com/chaoss/grimoirelab-toolkit/ to /Users/mabel/.virtualenvs/grimoirelab-sirmordred/src/grimoirelab-toolkit
+  Running command git clone --filter=blob:none --quiet https://github.com/chaoss/grimoirelab-toolkit/ /Users/mabel/.virtualenvs/grimoirelab-sirmordred/src/grimoirelab-toolkit
+  Resolved https://github.com/chaoss/grimoirelab-toolkit/ to commit b3328c2031aa9d3b7ac0ce3c129c6b06a8302d9e
+  Installing build dependencies ... done
+  Checking if build backend supports build_editable ... done
+  Getting requirements to build wheel ... done
+  Preparing metadata (pyproject.toml) ... done
+Collecting graal@ git+https://github.com/chaoss/grimoirelab-graal@master
+  Cloning https://github.com/chaoss/grimoirelab-graal (to revision master) to /private/var/folders/6x/5sk2b7h140l6phl07rtlg_1w0000gn/T/pip-install-hr6j_c8c/graal_486456875748455fb6e1d65a88275005
+  Running command git clone --filter=blob:none --quiet https://github.com/chaoss/grimoirelab-graal /private/var/folders/6x/5sk2b7h140l6phl07rtlg_1w0000gn/T/pip-install-hr6j_c8c/graal_486456875748455fb6e1d65a88275005
+  Resolved https://github.com/chaoss/grimoirelab-graal to commit 201849c6ebef3f1dbf3ae51c9a2c1ee53da360d0
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+  Preparing metadata (pyproject.toml) ... done
+Collecting grimoireelk@ git+https://github.com/chaoss/grimoirelab-elk@master
+  Cloning https://github.com/chaoss/grimoirelab-elk (to revision master) to /private/var/folders/6x/5sk2b7h140l6phl07rtlg_1w0000gn/T/pip-install-hr6j_c8c/grimoireelk_49e86f729b364df19b0906220c8f85cc
+  Running command git clone --filter=blob:none --quiet https://github.com/chaoss/grimoirelab-elk /private/var/folders/6x/5sk2b7h140l6phl07rtlg_1w0000gn/T/pip-install-hr6j_c8c/grimoireelk_49e86f729b364df19b0906220c8f85cc
+  Resolved https://github.com/chaoss/grimoirelab-elk to commit cf433d69356cffffa79b475876147687f1bfb1cd
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+  Preparing metadata (pyproject.toml) ... done
+  WARNING: Generating metadata for package grimoireelk produced metadata for project name grimoire-elk. Fix your #egg=grimoireelk fragments.
+Discarding git+https://github.com/chaoss/grimoirelab-elk@master: Requested grimoire-elk from git+https://github.com/chaoss/grimoirelab-elk@master (from -r requirements_total_actual.txt (line 40)) has inconsistent name: filename has 'grimoireelk', but metadata has 'grimoire-elk'
+Collecting grimoirelab-panels@ git+https://github.com/chaoss/grimoirelab-sigils@master
+  Cloning https://github.com/chaoss/grimoirelab-sigils (to revision master) to /private/var/folders/6x/5sk2b7h140l6phl07rtlg_1w0000gn/T/pip-install-hr6j_c8c/grimoirelab-panels_8c410fec505442f59febcad2cd72a745
+  Running command git clone --filter=blob:none --quiet https://github.com/chaoss/grimoirelab-sigils /private/var/folders/6x/5sk2b7h140l6phl07rtlg_1w0000gn/T/pip-install-hr6j_c8c/grimoirelab-panels_8c410fec505442f59febcad2cd72a745
+  Resolved https://github.com/chaoss/grimoirelab-sigils to commit 1e3c3ef6c6e15c5bee87726bb526b7572ad4dab0
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+  Preparing metadata (pyproject.toml) ... done
+Collecting grimoirelab-toolkit@ git+https://github.com/chaoss/grimoirelab-toolkit@master
+  Cloning https://github.com/chaoss/grimoirelab-toolkit (to revision master) to /private/var/folders/6x/5sk2b7h140l6phl07rtlg_1w0000gn/T/pip-install-hr6j_c8c/grimoirelab-toolkit_ae74401b9b3942a7876072ed82a2e83b
+  Running command git clone --filter=blob:none --quiet https://github.com/chaoss/grimoirelab-toolkit /private/var/folders/6x/5sk2b7h140l6phl07rtlg_1w0000gn/T/pip-install-hr6j_c8c/grimoirelab-toolkit_ae74401b9b3942a7876072ed82a2e83b
+  Resolved https://github.com/chaoss/grimoirelab-toolkit to commit b3328c2031aa9d3b7ac0ce3c129c6b06a8302d9e
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+  Preparing metadata (pyproject.toml) ... done
+Collecting kidash@ git+https://github.com/chaoss/grimoirelab-kidash@master
+  Cloning https://github.com/chaoss/grimoirelab-kidash (to revision master) to /private/var/folders/6x/5sk2b7h140l6phl07rtlg_1w0000gn/T/pip-install-hr6j_c8c/kidash_860a3fae224d4565bbe669a2e5dd282b
+  Running command git clone --filter=blob:none --quiet https://github.com/chaoss/grimoirelab-kidash /private/var/folders/6x/5sk2b7h140l6phl07rtlg_1w0000gn/T/pip-install-hr6j_c8c/kidash_860a3fae224d4565bbe669a2e5dd282b
+  Resolved https://github.com/chaoss/grimoirelab-kidash to commit f578060333f45224c82ee4a09896d7201ff73504
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+  Preparing metadata (pyproject.toml) ... done
+Collecting perceval@ git+https://github.com/chaoss/grimoirelab-perceval@master
+  Cloning https://github.com/chaoss/grimoirelab-perceval (to revision master) to /private/var/folders/6x/5sk2b7h140l6phl07rtlg_1w0000gn/T/pip-install-hr6j_c8c/perceval_2d220e6ee4564ebd8b316a5061de3ae2
+  Running command git clone --filter=blob:none --quiet https://github.com/chaoss/grimoirelab-perceval /private/var/folders/6x/5sk2b7h140l6phl07rtlg_1w0000gn/T/pip-install-hr6j_c8c/perceval_2d220e6ee4564ebd8b316a5061de3ae2
+  Resolved https://github.com/chaoss/grimoirelab-perceval to commit cf8d5ffc2db0b4e2c19c541daa6062ccd2e609bd
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+  Preparing metadata (pyproject.toml) ... done
+Collecting perceval-finos@ git+https://github.com/Bitergia/grimoirelab-perceval-finos@master
+  Cloning https://github.com/Bitergia/grimoirelab-perceval-finos (to revision master) to /private/var/folders/6x/5sk2b7h140l6phl07rtlg_1w0000gn/T/pip-install-hr6j_c8c/perceval-finos_6851e972eae848a5a0c4a519af6b9387
+  Running command git clone --filter=blob:none --quiet https://github.com/Bitergia/grimoirelab-perceval-finos /private/var/folders/6x/5sk2b7h140l6phl07rtlg_1w0000gn/T/pip-install-hr6j_c8c/perceval-finos_6851e972eae848a5a0c4a519af6b9387
+  Resolved https://github.com/Bitergia/grimoirelab-perceval-finos to commit 3199e698aedf68b8c8bdb3825a86e1b559256013
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+  Preparing metadata (pyproject.toml) ... done
+Collecting perceval-mozilla@ git+https://github.com/chaoss/grimoirelab-perceval-mozilla@master
+  Cloning https://github.com/chaoss/grimoirelab-perceval-mozilla (to revision master) to /private/var/folders/6x/5sk2b7h140l6phl07rtlg_1w0000gn/T/pip-install-hr6j_c8c/perceval-mozilla_daa6c1973d8e46f48191dd9dcbc9eeea
+  Running command git clone --filter=blob:none --quiet https://github.com/chaoss/grimoirelab-perceval-mozilla /private/var/folders/6x/5sk2b7h140l6phl07rtlg_1w0000gn/T/pip-install-hr6j_c8c/perceval-mozilla_daa6c1973d8e46f48191dd9dcbc9eeea
+  Resolved https://github.com/chaoss/grimoirelab-perceval-mozilla to commit 45832ddb40ff1f8bec8177217d6dd3635460d507
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+  Preparing metadata (pyproject.toml) ... done
+Collecting perceval-opnfv@ git+https://github.com/chaoss/grimoirelab-perceval-opnfv@master
+  Cloning https://github.com/chaoss/grimoirelab-perceval-opnfv (to revision master) to /private/var/folders/6x/5sk2b7h140l6phl07rtlg_1w0000gn/T/pip-install-hr6j_c8c/perceval-opnfv_a358dc5ba40b4ac8bb70195f6e5b28b9
+  Running command git clone --filter=blob:none --quiet https://github.com/chaoss/grimoirelab-perceval-opnfv /private/var/folders/6x/5sk2b7h140l6phl07rtlg_1w0000gn/T/pip-install-hr6j_c8c/perceval-opnfv_a358dc5ba40b4ac8bb70195f6e5b28b9
+  Resolved https://github.com/chaoss/grimoirelab-perceval-opnfv to commit 0852c18069345f8aa5c7004cb77b3bea50adef9d
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+  Preparing metadata (pyproject.toml) ... done
+Collecting perceval-puppet@ git+https://github.com/chaoss/grimoirelab-perceval-puppet@master
+  Cloning https://github.com/chaoss/grimoirelab-perceval-puppet (to revision master) to /private/var/folders/6x/5sk2b7h140l6phl07rtlg_1w0000gn/T/pip-install-hr6j_c8c/perceval-puppet_ef3181c34b654aff8754e7889bf9820b
+  Running command git clone --filter=blob:none --quiet https://github.com/chaoss/grimoirelab-perceval-puppet /private/var/folders/6x/5sk2b7h140l6phl07rtlg_1w0000gn/T/pip-install-hr6j_c8c/perceval-puppet_ef3181c34b654aff8754e7889bf9820b
+  Resolved https://github.com/chaoss/grimoirelab-perceval-puppet to commit 275bb6e5dd1f4ba764b84ff32c147f495e63057c
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+  Preparing metadata (pyproject.toml) ... done
+Collecting perceval-weblate@ git+https://github.com/chaoss/grimoirelab-perceval-weblate@master
+  Cloning https://github.com/chaoss/grimoirelab-perceval-weblate (to revision master) to /private/var/folders/6x/5sk2b7h140l6phl07rtlg_1w0000gn/T/pip-install-hr6j_c8c/perceval-weblate_e2697a7da8b445eaa1e37c1209daa7e1
+  Running command git clone --filter=blob:none --quiet https://github.com/chaoss/grimoirelab-perceval-weblate /private/var/folders/6x/5sk2b7h140l6phl07rtlg_1w0000gn/T/pip-install-hr6j_c8c/perceval-weblate_e2697a7da8b445eaa1e37c1209daa7e1
+  Resolved https://github.com/chaoss/grimoirelab-perceval-weblate to commit 4a9c2b43ce22d9db3aa0086e40977b56c1d7f364
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+  Preparing metadata (pyproject.toml) ... done
+Collecting sortinghat@ git+https://github.com/chaoss/grimoirelab-sortinghat@master
+  Cloning https://github.com/chaoss/grimoirelab-sortinghat (to revision master) to /private/var/folders/6x/5sk2b7h140l6phl07rtlg_1w0000gn/T/pip-install-hr6j_c8c/sortinghat_e02fb8df58bf4375abb1307c8b548a0b
+  Running command git clone --filter=blob:none --quiet https://github.com/chaoss/grimoirelab-sortinghat /private/var/folders/6x/5sk2b7h140l6phl07rtlg_1w0000gn/T/pip-install-hr6j_c8c/sortinghat_e02fb8df58bf4375abb1307c8b548a0b
+  Resolved https://github.com/chaoss/grimoirelab-sortinghat to commit 8b1d466476add5ef6979e8f7970ea9c097670a65
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+  Preparing metadata (pyproject.toml) ... done
+ERROR: Could not find a version that satisfies the requirement grimoirelab-perceval-finos (unavailable) (from versions: none)
+ERROR: No matching distribution found for grimoirelab-perceval-finos (unavailable)
+
+
