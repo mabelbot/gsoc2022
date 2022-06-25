@@ -56,6 +56,8 @@ The organization I am using for this project: https://github.com/chaoss-conversi
             - Try again with the readme. Made a new branch `git checkout -b mabelbot-testing-06232022-origin` 
             - It seems to work now. So the script would need to add an extra step of setting the url of the origin remote as it is defaulting to the user's own repository IF you choose to work with an organization. These changes are marked with `f2c29d`. Referenced: https://gitpython.readthedocs.io/en/stable/reference.html?highlight=set_url#git.remote.Remote.set_url
         7. PyCharm setup. See the microtasks repository for what I did for this.
+            - Create from existing sources
+
 
 
 
@@ -63,6 +65,7 @@ The organization I am using for this project: https://github.com/chaoss-conversi
 1. When to run the script with `--update`? Is it still relevant?
 2. Are remotes correct for an organization setup?
 3. Tests for grimoirelab-elk
+4. Is ignoring the correct behavior for the installation? This didn't come up last time
 
 
 
