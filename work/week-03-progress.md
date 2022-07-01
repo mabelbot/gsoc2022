@@ -18,8 +18,22 @@ The organization I am using for this project: https://github.com/chaoss-conversi
     - You can include the json file that contains the links to the repos/projects/ etc. in the repository too, and pass its name into the conf.yaml file.
     - Method `def metrics_model_enrich(self,repos_list, label):` is on 339 which performs the enriching. 
     - It seems like you can bulk_upload data in dictionary form back to the ElasticSearch. 
-    - 
-    - 
+- Reinstalling Perceval due to issue with release 0.19.1
+    - Perceval changes stashed - Saved working directory and index state WIP on master: 75a0633 Release 0.19.1
+- Line 240 -  https://github.com/chaoss/grimoirelab-elk/blob/master/grimoire_elk/utils.py#L240 "github": [GitHub, GitHubOcean, GitHubEnrich, GitHubCommand],
+- Github and GitHubCommand are coming from import from `perceval.backends.core.github import GitHub, GitHubCommand`. GitHubOcean is from `from .raw.github import GitHubOcean` (raw). GitHubEnrich is from `from .enriched.github import GitHubEnrich`. 
+- class githubEnrich is the starting point of the github enricher https://github.com/chaoss/grimoirelab-elk/blob/cf433d69356cffffa79b475876147687f1bfb1cd/grimoire_elk/enriched/github.py#L99
+- From now I believe the structure of this project should be multiple enrichers > MM (skipping the study level).
+- I'm working through github.py to see how an enricher works. 
+- The current config file and run configurations are for `git` and not `github`, but I will investigate that first.
+- What is in the raw data (`git-chaoss`)?
+    - It only contains commits.
+- Next, I tried changing the config file to do [github] enrichment with data coming from Perceval repository
+- What is in the raw data (`github_issues_chaoss`)?
+    - Issue, PR, or repository? Seems like only "issues"
+    - I believe some columns are duplicates?
+    - There are a lot of columns
+
 
 # Bug Log
 - `ModuleNotFoundError: No module named 'perceval.backend'` when running micro.py
@@ -35,13 +49,27 @@ The organization I am using for this project: https://github.com/chaoss-conversi
     - Repos changed - grimoirelab-elk, grimoirelab-perceval - change to temp branch and stash later when rebasing fixes. 
 - sortinghat.exceptions.DatabaseError: Access denied for user 'root'@'localhost' (using password: NO) (err: 1045) when running micro.py
     - This did not happen before. I tried resetting the docker containers with `docker-compose down -v`. This is because I believe the docker-compose file was incomplete from the tutorial on the https://chaoss.github.io/grimoirelab-tutorial/docs/getting-started/dev-setup/ so once I fixed that, I was able to proceed. There also was a port 3306 conflict which I solved by removing the mysqld process that I have from a previous project. 
+- Building with glab env setup py - it actually goes through the code (old versions) that I have forked locally (i.e. to mabelbot) on a create (update rebases normally). I have to delete those and modify the line where there's a bug in glab-dev-env-setup.py, line 179. 
+- Reinstalling modules does not fix this bug. 
+
 
 
 # Questions
+- projects.json - *github vs github
+- What's in github:pull github:repo
+- Is git chaoss only supposed to contain commits
 
 
     
 # To Do List
+- Check how the raw data works, and check how enriching will happen
+- Make meeting notes readable
+- Trace micro.py
+- Create config file - explore using jupyter notebook
+- Trace enricher code
+- Create branches
+- Add 1 thing to organization
+
 
 
 # Random 
