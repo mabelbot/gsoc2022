@@ -1,0 +1,14 @@
+url:
+    "https://user:password@ip:port"  
+params: 
+    {
+    'issue_index': Issue index  
+    'json_file': json file for repos messages
+    'git_index':  git index 
+    'git_branch': None,
+    'from_date': the beginning of time for metric model
+    'end_date': the end of time for metric model
+    'out_index': new index for metric model
+    'community': the name of community
+    'level': representation of the metrics, choose from repo, project, community.
+    }
