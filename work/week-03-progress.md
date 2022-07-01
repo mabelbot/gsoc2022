@@ -22,14 +22,17 @@ The organization I am using for this project: https://github.com/chaoss-conversi
     - 
 
 # Bug Log
-- ModuleNotFoundError: No module named 'perceval.backend'
+- `ModuleNotFoundError: No module named 'perceval.backend'`
     - Module perceval is correctly imported as a Content Root. However, it is not being recognized as a Python package (a python package, e.g. contains `__init__.py`)
     - I found `__init__.py` is not included in commits past June 1, 2022. 
     - For now I will put the old version of `__init__.py` back into the perceval directory under grimoirelab-perceval directory so we can continue to trace the code.
     - Then there is another error, ModuleNotFoundError: No module named 'perceval.backends.core'
     - For this, the backends also doesn't have an `__init__.py`.  
     - Now, the puppet error (ModuleNotFoundError: No module named 'perceval.backends.puppet') is back. I will comment out some lines in `/Users/mabel/Desktop/GSOC2022/grimoirelab-dev/sources/grimoirelab-elk/grimoire_elk/utils.py` to avoid it.
-    - These are temporary fixes - it should be permanently fixed by changing imports or adding more `__init__.py` files.
+    - These are temporary "fixes" - it should be permanently fixed by changing imports or adding more `__init__.py` files.
+    - `/Users/mabel/Desktop/GSOC2022/grimoirelab-dev/sources/grimoirelab-elk/grimoire_elk/utils.py` also claims on line 234 NameError: name 'Crates' is not defined.
+        - Along with other connectors. I might have to comment those out for now. 
+    - Repos changed - grimoirelab-elk, grimoirelab-perceval - change to temp branch and stash later when rebasing fixes. 
 
 
 # Questions
