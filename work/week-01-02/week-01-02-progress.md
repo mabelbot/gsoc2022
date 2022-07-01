@@ -32,7 +32,7 @@ The organization I am using for this project: https://github.com/chaoss-conversi
                 Creating grimoirelab-dev_kibiter_1       ... done 
             ```
 
-        3. [Cloning the repositories](https://chaoss.github.io/grimoirelab-tutorial/docs/getting-started/dev-setup/#cloning-the-repositories) - this step is going to fork and clone the repositories to a local folder. I created a virtual environment in `grimoirelab-dev` (python3 -m venv dev-env-setup because I anticipate it will be different than the one in the Pycharm step later) to perform the installation `python3 -m pip install PyGitHub GitPython`. 
+        3. [Cloning the repositories](https://chaoss.github.io/grimoirelab-tutorial/docs/getting-started/dev-setup/#cloning-the-repositories) - this step is going to fork and clone the repositories to a local folder. I created a virtual environment in `grimoirelab-dev` (dev-env-setup) (python3 -m venv dev-env-setup because I anticipate it will be different than the one in the Pycharm step later) to perform the installation `python3 -m pip install PyGitHub GitPython`. 
         4. I then followed the instructions to use the script. The script is in the Github Gist by @vchrombie, [glab-dev-env-setup](https://gist.github.com/vchrombie/4403193198cd79e7ee0079259311f6e8). I am going to try to modify it to take an organization parameter. This is because although I believe it can be done manually, [see here](https://stackoverflow.com/questions/9023533/fork-as-organization-after-already-forking-in-github#:~:text=Clicking%20the%20Fork%20button%20will,repository%20in%20your%20organization%20area.), but the script was really useful before.
             - https://pygithub.readthedocs.io/en/latest/github_objects/Repository.html
             - **Note**: I am not sure which of the repos within Grimoirelab I will ultimately need in the organization, nor how to exclude some in the organization and still keep the dev setup functioning the same way as the tutorial, so I will try to fork all of them.
@@ -56,7 +56,10 @@ The organization I am using for this project: https://github.com/chaoss-conversi
             - Try again with the readme. Made a new branch `git checkout -b mabelbot-testing-06232022-origin` 
             - It seems to work now. So the script would need to add an extra step of setting the url of the origin remote as it is defaulting to the user's own repository IF you choose to work with an organization. These changes are marked with `f2c29d`. Referenced: https://gitpython.readthedocs.io/en/stable/reference.html?highlight=set_url#git.remote.Remote.set_url
         7. PyCharm setup. See the microtasks repository for what I did for this.
-            - Create from existing sources
+            - Create project from existing sources
+            - The first environment got screwed up because I accidentally did not exclude here  "PyCharm will automatically create a virtual env, where you should install the dependencies listed in each requirements.txt, excluding the ones concerning the grimoirelab components." 
+            - So I deleted it and made a new one and installed the requirements properly
+            - I had an environment `grimoirelab-sirmordred2` from before, but this one is just `grimoirelab-sirmordred`
 
 
 
