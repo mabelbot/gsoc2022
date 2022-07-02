@@ -31,7 +31,7 @@ The organization I am using for this project: https://github.com/chaoss-conversi
 - Next, I tried changing the config file to do [github] enrichment with data coming from Perceval repository
 - What is in the raw data (`github_issues_chaoss`)?
     - Issue, PR, or repository? Seems like only "issues"
-    - I believe some columns are duplicates?
+    - I believe some columns are duplicates? (Actually not)
     - There are a lot of columns
 
 
@@ -51,13 +51,18 @@ The organization I am using for this project: https://github.com/chaoss-conversi
     - This did not happen before. I tried resetting the docker containers with `docker-compose down -v`. This is because I believe the docker-compose file was incomplete from the tutorial on the https://chaoss.github.io/grimoirelab-tutorial/docs/getting-started/dev-setup/ so once I fixed that, I was able to proceed. There also was a port 3306 conflict which I solved by removing the mysqld process that I have from a previous project. 
 - Building with glab env setup py - it actually goes through the code (old versions) that I have forked locally (i.e. to mabelbot) on a create (update rebases normally). I have to delete those and modify the line where there's a bug in glab-dev-env-setup.py, line 179. 
 - Reinstalling modules does not fix this bug. 
+- Install GitToolBox plugin for autofetch on Pycharm
+
+# Branches Tracker
+- New branch: github_mm_enricher for grimoirelab-elk
 
 
 
 # Questions
-- projects.json - *github vs github
+- In projects.json - *github vs github
 - What's in github:pull github:repo
 - Is git chaoss only supposed to contain commits
+- What happens if you specify something else in category = issue? Like if you tried `pull_request` instead?
 
 
     
