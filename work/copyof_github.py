@@ -63,6 +63,10 @@ logger = logging.getLogger(__name__)
 class Mapping(BaseMapping): 
     #info Base Mapping comes from grimoire_elk/elastic_mapping.py. In it, there is an empty mapping. Mapping is the process of defining how a document, and the fields it contains, are stored and indexed. Here there is a mapping defined for GitHubEnricher. Other Enrichers can have more properties, for example in https://github.com/chaoss/grimoirelab-elk/blob/cf433d69356cffffa79b475876147687f1bfb1cd/grimoire_elk/enriched/github2.py. Studies like onion do not appear to have Mappings.
 
+    # Prevent automatic type conversion - specifically geolocation.
+    # If you don't create this mapping from string to geo point it will not analyze as geopoint
+    # Most cases it is not necessary
+
     @staticmethod
     def get_elastic_mappings(es_major):
         """Get Elasticsearch mapping.
@@ -151,6 +155,7 @@ class GitHubEnrich(Enrich):
                 if user:
                     yield user
 
+#info Get sorting hat diagram process and how it integrates w/ other GL modules
     def get_sh_identity(self, item, identity_field=None):
         identity = {}
 
@@ -244,6 +249,10 @@ class GitHubEnrich(Enrich):
 
         super().enrich_demography(ocean_backend, enrich_backend, date_field, author_field=author_field)
 
+#info Data Layers: Raw Data, Enrich, and then third is the Study (used to distinguish different roles of contributors based on their contributions). For Metrics Model  we can treat it as the same layer as the Study. Study only focused on one data source, eg issue or pull requests. Studies never combined data sources, but MM will consider different data sources and use algorithm to calculate final result.
+# Github will trigger onion study if you've configured it in the config file
+# Go to Github REST API Documentation 
+# Data processing
     def enrich_onion(self, ocean_backend, enrich_backend,
                      no_incremental=False,
                      in_index_iss='github_issues_onion-src',
