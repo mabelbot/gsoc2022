@@ -54,15 +54,25 @@ The organization I am using for this project: https://github.com/chaoss-conversi
 - Install GitToolBox plugin for autofetch on Pycharm
 
 # Branches Tracker
-- New branch: github_mm_enricher for grimoirelab-elk
+- New branch: `github_mm_enricher` for grimoirelab-elk
+- Files changed in sirmordred: projects.json, setup.cfg
+- Files changed in grimoirelab-elk = grimoirelab-elk/grimoire_elk/utils.py
+- Files changed in perceval - add init.pys 
 
 
 
 # Questions
+- Go over bugs. Current status of rebased project / old version
 - In projects.json - *github vs github
 - What's in github:pull github:repo
 - Is git chaoss only supposed to contain commits
 - What happens if you specify something else in category = issue? Like if you tried `pull_request` instead?
+- How does the mapping fit in?
+- Where do the studies fit in? What is the point of calling them? Are they necessary?
+- What is a connector?
+- What's in mariadb? Do we need any code handling there? Maybe you need to update the identities to make sure they are using the same convention
+- Resolving double identities in GrimoireLab
+
 
 
     
@@ -74,7 +84,13 @@ The organization I am using for this project: https://github.com/chaoss-conversi
 - Trace enricher code
 - Create branches
 - Add 1 thing to organization
+- Create issue
+- Use kibana for data insights!
+- branch
 
 
 
 # Random 
+- Maintainer roles?
+- sig = special interesting group = project
+- Query methods elastic serach
