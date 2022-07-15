@@ -1,4 +1,4 @@
-# Coding Period Week 1 + 2 Report
+# Coding Period Week 3 Report
 [![Generic badge](https://img.shields.io/badge/Report_Status-In_Progress-<>.svg)](https://shields.io/)
 [![Generic badge](https://img.shields.io/badge/Last_Updated_(PDT)-June_30,_2022-e10b95.svg)](https://shields.io/)
 
