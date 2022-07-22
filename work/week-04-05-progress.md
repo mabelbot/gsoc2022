@@ -67,7 +67,8 @@ The organization I am using for this project: https://github.com/chaoss-conversi
     ```
     - To fix this, I will remove all metadata and turn _id into uuid. I will also remove _source from all fields (this was an artifact from json_normalize in pandas, which should not be explicitly included an Elasticsearch document).
     - Bug resolved - we are now able to upload via bulk_upload.
-- 
+- sorting hat uuid's not matching across indexes
+    - 
 
 # Branches Tracker
 - See google doc
@@ -88,7 +89,11 @@ rate limit
 how to work the logger
 how to use issue_comment_reactions in perceval
 is the first connector a perceval connector
-
+- Can developer levels ever go down? We're assuming it doesnt
+    - Yes, they are inactive. You can recall them back 
+- Sorting hat individuals
+    - contributor.json 
+    - 
 
 
 
@@ -102,6 +107,11 @@ is the first connector a perceval connector
 - meeting notes transcribe
 - Add logging
 - Need to upgrade pandas to >1.0.0 instead of the current pandas requirements in the virutal environment 
+- Add metrics models into the grimoirelab-sirmordred flow logic handling
+- Specific event triggered CR with special labels! (this doesn't have a 90 days interval)
+    - Add field or configuration key/values to fill such information out
+    - Add label name related to the event
+    - Trace group name over specific event
 
 
 # Random 

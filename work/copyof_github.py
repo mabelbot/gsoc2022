@@ -227,7 +227,7 @@ class GitHubEnrich(Enrich):
         return len(set(commenters))
 
     @metadata
-    def get_rich_item(self, item): #info This is the first step. Based on the item category, certain name mangled methods below will be called
+    def get_rich_item(self, item): #info This is the first step. Based on the item category, certain name mangled methods below will be called. who calls this method though? there are many references, one of which is in grimoire_elk/enriched/enrich.py (as well as all the tests directories)
 
         rich_item = {}
         if item['category'] == 'issue':
@@ -240,9 +240,9 @@ class GitHubEnrich(Enrich):
             logger.error("[github] rich item not defined for GitHub category {}".format(
                          item['category']))
 
-        self.add_repository_labels(rich_item)
+        self.add_repository_labels(rich_item) #info this is a superclass method in enrich.py file
         self.add_metadata_filter_raw(rich_item)
-        return rich_item
+        return rich_item #info control goes to line 97 of enrich.py
 
     def enrich_demography(self, ocean_backend, enrich_backend, date_field="grimoire_creation_date",
                           author_field="author_uuid"):
@@ -553,23 +553,23 @@ class GitHubEnrich(Enrich):
     def __get_rich_issue(self, item):
         rich_issue = {}
 
-        self.copy_raw_fields(self.RAW_FIELDS_COPY, item, rich_issue)
+        self.copy_raw_fields(self.RAW_FIELDS_COPY, item, rich_issue) #info copy over raw fields (includes metadata updated on, metadata timestamp, offset, origin, tag, uuid, and __len__)
         # The real data
         issue = item['data']
 
         rich_issue['time_to_close_days'] = \
-            get_time_diff_days(issue['created_at'], issue['closed_at'])
+            get_time_diff_days(issue['created_at'], issue['closed_at']) #info Add a time to close days property to it
 
         if issue['state'] != 'closed':
             rich_issue['time_open_days'] = \
                 get_time_diff_days(issue['created_at'], datetime_utcnow().replace(tzinfo=None))
         else:
-            rich_issue['time_open_days'] = rich_issue['time_to_close_days']
+            rich_issue['time_open_days'] = rich_issue['time_to_close_days'] #info this particular one was closed (merged)
 
-        rich_issue['user_login'] = issue['user']['login']
+        rich_issue['user_login'] = issue['user']['login'] #info Get person who opened the issue I think (author)
 
         user = issue.get('user_data', None)
-        if self.__has_user(user):
+        if self.__has_user(user): #info has user method checks if user exists
             rich_issue['user_name'] = user['name']
             rich_issue['author_name'] = user['name']
             rich_issue["user_domain"] = self.get_email_domain(user['email']) if user['email'] else None
@@ -585,7 +585,7 @@ class GitHubEnrich(Enrich):
             rich_issue['author_name'] = None
 
         assignee = issue.get('assignee_data', None)
-        if self.__has_user(assignee):
+        if self.__has_user(assignee): #info check if there is an assignee (basically if it's empty/none or not)
             assignee = issue['assignee_data']
             rich_issue['assignee_login'] = assignee['login']
             rich_issue['assignee_name'] = assignee['name']
@@ -593,7 +593,7 @@ class GitHubEnrich(Enrich):
             rich_issue['assignee_org'] = assignee['company']
             rich_issue['assignee_location'] = assignee['location']
             rich_issue['assignee_geolocation'] = None
-        else:
+        else: #info otherwise, set it all to None
             rich_issue['assignee_name'] = None
             rich_issue['assignee_login'] = None
             rich_issue["assignee_domain"] = None
@@ -601,16 +601,16 @@ class GitHubEnrich(Enrich):
             rich_issue['assignee_location'] = None
             rich_issue['assignee_geolocation'] = None
 
-        rich_issue['id'] = issue['id']
+        rich_issue['id'] = issue['id'] #info continue building rich issue properties
         rich_issue['id_in_repo'] = issue['html_url'].split("/")[-1]
-        rich_issue['repository'] = self.get_project_repository(rich_issue)
+        rich_issue['repository'] = self.get_project_repository(rich_issue) #info (see this method) - in the example case it'd be https://github.com/chaoss/augur
         rich_issue['title'] = issue['title']
         rich_issue['title_analyzed'] = issue['title']
         rich_issue['state'] = issue['state']
         rich_issue['created_at'] = issue['created_at']
         rich_issue['updated_at'] = issue['updated_at']
         rich_issue['closed_at'] = issue['closed_at']
-        rich_issue['url'] = issue['html_url']
+        rich_issue['url'] = issue['html_url'] #info I guess it's 2 properties with the same thing
         # Adding this field for consistency with the rest of github-related enrichers
         rich_issue['issue_url'] = issue['html_url']
         labels = []
@@ -618,7 +618,7 @@ class GitHubEnrich(Enrich):
         rich_issue['labels'] = labels
 
         rich_issue['pull_request'] = True
-        rich_issue['item_type'] = 'pull request'
+        rich_issue['item_type'] = 'pull request' #tbd not sure what this is because it's not a pull request why d o we need to set this first?
         if 'head' not in issue.keys() and 'pull_request' not in issue.keys():
             rich_issue['pull_request'] = False
             rich_issue['item_type'] = 'issue'
@@ -627,7 +627,7 @@ class GitHubEnrich(Enrich):
         rich_issue['github_repo'] = re.sub('.git$', '', rich_issue['github_repo'])
         rich_issue["url_id"] = rich_issue['github_repo'] + "/issues/" + rich_issue['id_in_repo']
 
-        if self.prjs_map:
+        if self.prjs_map: #tbd where do we get prjs_map (i took a screenshot of what is in it in the debugger)
             rich_issue.update(self.get_item_project(rich_issue))
 
         if 'project' in item:
@@ -642,7 +642,7 @@ class GitHubEnrich(Enrich):
         rich_issue.update(self.get_grimoire_fields(issue['created_at'], "issue"))
 
         item[self.get_field_date()] = rich_issue[self.get_field_date()]
-        rich_issue.update(self.get_item_sh(item, self.issue_roles))
+        rich_issue.update(self.get_item_sh(item, self.issue_roles)) #info update with another {} dictionary
 
         return rich_issue
 

@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 #
-#
 # Copyright (C) 2015-2020 Bitergia
 #
 # This program is free software; you can redistribute it and/or modify
@@ -59,8 +58,7 @@ NO_USER_INFO = {"organizations": []}
 logger = logging.getLogger(__name__)
 
 
-class Mapping(BaseMapping): 
-    #info Base Mapping comes from grimoire_elk/elastic_mapping.py. In it, there is an empty mapping. Mapping is the process of defining how a document, and the fields it contains, are stored and indexed. Here there is a mapping defined for GitHubEnricher. Other Enrichers can have more properties, for example in https://github.com/chaoss/grimoirelab-elk/blob/cf433d69356cffffa79b475876147687f1bfb1cd/grimoire_elk/enriched/github2.py. Studies like onion do not appear to have Mappings.
+class Mapping(BaseMapping):
 
     @staticmethod
     def get_elastic_mappings(es_major):
@@ -98,8 +96,7 @@ class Mapping(BaseMapping):
         return {"items": mapping}
 
 
-class GitHubConversionRateEnrich(Enrich):
-    #info This is the entry point of the Enricher
+class GitHubEnrich(Enrich):
 
     mapping = Mapping
 
@@ -113,7 +110,7 @@ class GitHubConversionRateEnrich(Enrich):
                          db_user, db_password, db_host)
 
         self.studies = []
-        self.studies.append(self.enrich_onion) #tbd come back to these later to see if they are used
+        self.studies.append(self.enrich_onion)
         self.studies.append(self.enrich_pull_requests)
         self.studies.append(self.enrich_geolocation)
         self.studies.append(self.enrich_extra_data)
@@ -221,7 +218,7 @@ class GitHubConversionRateEnrich(Enrich):
         return len(set(commenters))
 
     @metadata
-    def get_rich_item(self, item): #info This is the first step. Based on the item category, certain name mangled methods below will be called
+    def get_rich_item(self, item):
 
         rich_item = {}
         if item['category'] == 'issue':
